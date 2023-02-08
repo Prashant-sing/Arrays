@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+    
+        
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/file_name.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            //miDebuggerPath, normally as folow:
+            "miDebuggerPath": "C:\\Mingw\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+             //optional, if you want to automatically build it
+            "preLaunchTask": "build"
+        }
+    ]
